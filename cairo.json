@@ -84,5 +84,20 @@
 			"end"
 		],
 		"description": "Defines a struct"
+	},
+	"Documentation": {
+		"prefix": [
+			"doc",
+			"do"
+		],
+		"body": [
+			"# @notice ${1:explanation}",
+			"# @dev ${2:remark}",
+			"# @param ${3:param1}: ${4:param1Description}",
+			"# @param ${5:param2}: ${6:param2Description}",
+			"# @return ${7: return1}: ${8: return1Description}",
+			"# @return ${9: return1}: ${10: return1Description}"
+		],
+		"description": "Documents a method"
 	}
 }
