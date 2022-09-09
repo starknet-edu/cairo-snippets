@@ -1,87 +1,50 @@
 {
 	"Storage var": {
-		"prefix": [
-			"storage",
-			"@storage",
-			"@storage_var",
-			"stor"
-		],
-		"body": [
-			"@storage_var",
-			"func ${1:name}(${2:key}) -> (${3:value}):",
-			"end"
-		],
+		"prefix": ["storage", "@storage", "@storage_var", "stor"],
+		"body": ["@storage_var", "func ${1:name}(${2:key}) -> (${3:value}) {", "}"],
 		"description": "Defines a storage variable"
 	},
 	"External function definition": {
-		"prefix": [
-			"external",
-			"@external",
-			"ext",
-			"exte",
-			"@ext",
-			"@exte"
-		],
+		"prefix": ["external", "@external", "ext", "exte", "@ext", "@exte"],
 		"body": [
 			"@external",
-			"func ${1:name}{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_check_ptr}(${2:params}) -> (${3:returns}):",
+			"func ${1:name}{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_check_ptr}(${2:params}) -> (${3:returns}) {",
 			"return (${4:res})",
-			"end"
+			"}"
 		],
 		"description": "Defines an external function"
 	},
 	"Internal function definition": {
-		"prefix": [
-			"func",
-			"def",
-			"function",
-			"fun"
-		],
+		"prefix": ["func", "def", "function", "fun"],
 		"body": [
-			"func ${1:name}{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_check_ptr}(${2:params}) -> (${3:returns}):",
+			"func ${1:name}{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_check_ptr}(${2:params}) -> (${3:returns}) {",
 			"return (${4:res})",
-			"end"
+			"}"
 		],
 		"description": "Defines an internal function"
 	},
 	"View definition": {
-		"prefix": [
-			"view",
-			"vi",
-			"@view",
-			"@vi"
-		],
+		"prefix": ["view", "vi", "@view", "@vi"],
 		"body": [
 			"@view",
-			"func view_${1:name}{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_check_ptr}(${2:params}) -> (${3:returns}):",
+			"func view_${1:name}{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_check_ptr}(${2:params}) -> (${3:returns}) {",
 			"return (${4:res})",
-			"end"
+			"}"
 		],
 		"description": "Defines a view"
 	},
 	"Event definition": {
-		"prefix": [
-			"event",
-			"ev",
-			"@event",
-			"@ev"
-		],
-		"body": [
-			"@event",
-			"func ${1:name}(${2:params}):",
-			"end"
-		],
+		"prefix": ["event", "ev", "@event", "@ev"],
+		"body": ["@event", "func ${1:name}(${2:params}) {", "}"],
 		"description": "Defines an event"
 	},
 	"Struct": {
-		"prefix": [
-			"struct"
-		],
+		"prefix": ["struct"],
 		"body": [
-			"struct ${1:name}:",
-			"    member ${4:first_member} : ${5:felt}",
-			"    member ${6:second_member} : ${7:felt}",
-			"end"
+			"struct ${1:name} {",
+			"    ${4:first_member} : ${5:felt}",
+			"    ${6:second_member} : ${7:felt}",
+			"}"
 		],
 		"description": "Defines a struct"
 	}
